@@ -16,7 +16,7 @@ rule all:
         expand('Trimming/{sample}_R1.trim.fastq', sample=SAMPLES)
 
 
-rule trimming:
+rule trim:
     input:
         adapters = ADAPTERS,
         r1 = '{sample}_R1.fastq.gz',
